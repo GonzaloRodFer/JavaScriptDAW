@@ -5,3 +5,4 @@ function edad1(edad) {
     return false;
   }
 }
+console.log(edad1(13));
