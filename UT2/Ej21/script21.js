@@ -5,4 +5,4 @@ function factorial(n) {
   }
   return resultado;
 }
-console.log(factorial(3));
+console.log(factorial(4));

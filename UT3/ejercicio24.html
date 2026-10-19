@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio de desplazamiento</title>
+    <style>
+      #botones {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #botones button {
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio de desplazamiento de página</h1>
+
+    <!-- Botones flotantes -->
+    <div id="botones">
+      <button onclick="subir()">Subir</button>
+      <button onclick="bajar()">Bajar 300 px</button>
+      <button onclick="posicion()">Posición</button>
+    </div>
+
+    <hr />
+
+    <hr />
+
+    <!-- Contenido de la página -->
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+      <script src="Ejercicio24.js"></script>
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet
+      consectetur eaque autem veritatis, impedit vitae vel veniam porro, ut
+      reiciendis asperiores deserunt, minus sed eligendi reprehenderit maxime
+      unde iste incidunt.
+    </p>
+  </body>
+</html>
