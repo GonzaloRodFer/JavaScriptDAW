@@ -1,7 +1,9 @@
-function cambioPagina(url, remplazar) {
-  if (url != "" || url != null) {
+function cambioPagina(url, remplazar = false) {
+  if (url == "" || url == null || !url) {
+    alert("La página no existe");
+  } else if (remplazar == true) {
     location.replace(url);
   } else {
-    console.log("Url no válida");
+    location.assign(url);
   }
 }
